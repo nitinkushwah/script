@@ -1,2 +1,5 @@
 This is test file
+<<<<<<< HEAD
 Now this line is after reverting and making new changes
+=======
+>>>>>>> parent of 96c3b64... Adding another line
