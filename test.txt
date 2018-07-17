@@ -1,3 +1,2 @@
 This is test file
-after reset:wq
-
+Now this line is after reverting and making new changes
