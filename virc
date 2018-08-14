@@ -1,3 +1,5 @@
+#Cheatsheet for VI Editor
+
 :set hlsearch    //highlights the search results
 :noh   //exit highlight search result
 
