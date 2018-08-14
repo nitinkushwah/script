@@ -1,6 +1,6 @@
 #Cheatsheet for VI Editor
 
-:g/xxx/d     //Delete all occurances of xxx in file
+:g/xxx/d     //Delete all lines containing of xxx in file
 
 :set hlsearch    //highlights the search results
 :noh   //exit highlight search result
