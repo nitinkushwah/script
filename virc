@@ -1,0 +1,12 @@
+:set hlsearch    //highlights the search results
+:noh   //exit highlight search result
+
+:set nu  //numbering
+:set nonu
+
+:set ic  //ignore case
+
+:syntax on
+:syntax off
+
+:colorscheme evening
