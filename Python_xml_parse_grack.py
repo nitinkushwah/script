@@ -1,6 +1,6 @@
 import re
 import xml.etree.ElementTree as ET
-tree = ET.parse('config.xml')
+tree = ET.parse('config2.xml')
 root = tree.getroot()
 
 print(root.tag)
@@ -101,4 +101,27 @@ for i in root.iter('slave'):
 	print("Hotspare", i.find('hotspare').text)
 	print("___________________")
 
-
+for i in root.iter('mntent'):
+	#print("Name: ",i.find('dir').text)
+	res=re.search(r'/media/.*',i.find('dir').text)
+	if res:
+		#print("Export:",res.group())
+		#print("opts:", i.find('opts').text)
+		sv=re.search(r'subvol=(\w+)',i.find('opts').text)
+		if sv:
+			print("Subvolume:",sv.group(1), "|",res.group())
+	
+'''
+for i in root.iter('share'):
+	devpath=i.find('uuid').text
+	print(devpath)
+	#lst=devpath.split("_")
+	#print(lst)
+	#print("Model:",lst[1],"SN:",lst[2], i.find('enable').text)
+'''
+for i in root.iter('device'):
+	if i.find('devicefile') is not None:
+		devpath=i.find('devicefile').text
+		lst=devpath.split("_")
+		print(lst)
+		print("Model:",lst[1],"SN:",lst[2], i.find('enable').text)
